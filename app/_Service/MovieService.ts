@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_BASE_URL = "http://dev.moviepunk.o-r.kr/api/movies";
+const API_BASE_URL = "https://dev.moviepunk.o-r.kr/api/movies";
 
 export const getNowPlaying = async () => {
   try {

@@ -1,7 +1,7 @@
 import axios from 'axios';
 import {Member} from "@/(types)/types";
 
-const API_URL = 'http://dev.moviepunk.o-r.kr/api/member';
+const API_URL = 'https://dev.moviepunk.o-r.kr/api/member';
 
 // Axios 인스턴스 생성
 const axiosInstance = axios.create({
@@ -27,7 +27,7 @@ axiosInstance.interceptors.response.use(
 
 export const login = async (username: string, password: string) => {
     try {
-      const response = await axios.post('http://dev.moviepunk.o-r.kr/api/login', 
+      const response = await axios.post('https://dev.moviepunk.o-r.kr/api/login', 
         { username, password },
         { withCredentials: true }
       );
@@ -72,7 +72,7 @@ export const logout = async () => {
     export const getMemberDetails = async (): Promise<Member> => {
       try {
         const response = await axios.get('/api/member/profile', {
-          baseURL: 'http://dev.moviepunk.o-r.kr',
+          baseURL: 'https://dev.moviepunk.o-r.kr',
           headers: { 'Content-Type': 'application/json' },
           withCredentials: true,
         });
@@ -91,7 +91,7 @@ export const verifyPassword = async (password: string): Promise<boolean> => {
         "api/member/verifyPw",
         { password },
         {
-          baseURL: "http://dev.moviepunk.o-r.kr",
+          baseURL: "https://dev.moviepunk.o-r.kr",
           headers: { "Content-Type": "application/json" },
           withCredentials: true,
         }
@@ -109,7 +109,7 @@ export const checkNicknameDuplicate = async (nickname: string): Promise<boolean>
   try {
     const response = await axios.get(`/api/member/checkNickname`, {
       params: { nickname },
-      baseURL: "http://dev.moviepunk.o-r.kr",
+      baseURL: "https://dev.moviepunk.o-r.kr",
       headers: { "Content-Type": "application/json" },
       withCredentials: true,
     });

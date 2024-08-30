@@ -64,13 +64,13 @@ const Login: React.FC = () => {
         <div className={styles.socialLogin}>
           <p>다른 방법으로 로그인하기</p>
           <div className={styles.icons}>
-            <a href='http://dev.moviepunk.o-r.kr/oauth2/authorization/kakao'>
+            <a href='https://dev.moviepunk.o-r.kr/oauth2/authorization/kakao'>
               <Image src={kakao} alt='KAKAO' />
             </a>
-            <Link href='http://dev.moviepunk.o-r.kr/oauth2/authorization/google'>
+            <Link href='https://dev.moviepunk.o-r.kr/oauth2/authorization/google'>
               <Image src={google} alt='Google' />
             </Link>
-            <Link href='http://dev.moviepunk.o-r.kr/oauth2/authorization/naver'>
+            <Link href='https://dev.moviepunk.o-r.kr/oauth2/authorization/naver'>
               <Image src={naver} alt='Naver' />
             </Link>
           </div>
