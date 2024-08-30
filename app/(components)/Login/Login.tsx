@@ -64,13 +64,13 @@ const Login: React.FC = () => {
         <div className={styles.socialLogin}>
           <p>다른 방법으로 로그인하기</p>
           <div className={styles.icons}>
-            <a href='MovieBack-env.eba-pmi92aap.ap-northeast-2.elasticbeanstalk.com/oauth2/authorization/kakao'>
+            <a href='http://MovieBack-env.eba-pmi92aap.ap-northeast-2.elasticbeanstalk.com/oauth2/authorization/kakao'>
               <Image src={kakao} alt='KAKAO' />
             </a>
-            <Link href='MovieBack-env.eba-pmi92aap.ap-northeast-2.elasticbeanstalk.com/oauth2/authorization/google'>
+            <Link href='http://MovieBack-env.eba-pmi92aap.ap-northeast-2.elasticbeanstalk.com/oauth2/authorization/google'>
               <Image src={google} alt='Google' />
             </Link>
-            <Link href='MovieBack-env.eba-pmi92aap.ap-northeast-2.elasticbeanstalk.com/oauth2/authorization/naver'>
+            <Link href='http://MovieBack-env.eba-pmi92aap.ap-northeast-2.elasticbeanstalk.com/oauth2/authorization/naver'>
               <Image src={naver} alt='Naver' />
             </Link>
           </div>
