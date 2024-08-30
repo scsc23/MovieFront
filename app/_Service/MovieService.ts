@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_BASE_URL = "http://MovieBack-env.eba-pmi92aap.ap-northeast-2.elasticbeanstalk.com/api/movies";
+const API_BASE_URL = "http://dev.moviepunk.o-r.kr/api/movies";
 
 export const getNowPlaying = async () => {
   try {
