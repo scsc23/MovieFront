@@ -23,7 +23,7 @@ const Search = () => {
   const fetchResults = async (searchTerm: string, page: number) => {
     setLoading(true);
     try {
-      const response = await fetch(`ec2-43-201-54-252.ap-northeast-2.compute.amazonaws.com:5000/api/movies/search?keyword=${encodeURIComponent(searchTerm)}&page=${page}`);
+      const response = await fetch(`MovieBack-env.eba-pmi92aap.ap-northeast-2.elasticbeanstalk.com/api/movies/search?keyword=${encodeURIComponent(searchTerm)}&page=${page}`);
       if (response.ok) {
         const data = await response.json();
         if (Array.isArray(data)) {
@@ -52,7 +52,7 @@ const Search = () => {
 
   useEffect(() => {
     const currentURL = window.location.href;
-    const expectedURL = `ec2-43-201-54-252.ap-northeast-2.compute.amazonaws.com:3000/movies/search?keyword=${encodeURIComponent(searchTerm)}`;
+    const expectedURL = `moviefront-env.eba-r8jmajf2.ap-northeast-2.elasticbeanstalk.com/movies/search?keyword=${encodeURIComponent(searchTerm)}`;
 
     if (currentURL === expectedURL && (prevSearchTermRef.current !== searchTerm || !initialFetchRef.current)) {
       resetSearch();
