@@ -26,13 +26,8 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <head>
-        <Script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8395468797693752"
-          crossOrigin="anonymous"
-          strategy="afterInteractive"
-        />
-        </head>
+       <meta name="monetag" content="08ca9a7e7521b15ee85b2d898ee9121d">
+      </head>
 
       <body>
       <ThemeProvider>
