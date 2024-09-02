@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <head>
-       <meta name="monetag" content="08ca9a7e7521b15ee85b2d898ee9121d">
+       <meta name="monetag" content="08ca9a7e7521b15ee85b2d898ee9121d" />
       </head>
 
       <body>
