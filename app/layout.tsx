@@ -8,6 +8,8 @@ import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
+const Sidebar = dynamic(() => import('./(components)/Sidebar/Sidebar'), { ssr: false });
+
 export const metadata: Metadata = {
   title: "Your Site Title",
   description: "Your Site Description",
@@ -26,12 +28,21 @@ export default function RootLayout({
       <body>
         <ThemeProvider>
           <AuthProvider>
+            <Sidebar />
             <div style={{ display: "flex" }}>
               <div style={{ flex: 1 }}>
                 {children}
                 {modal}
               </div>
-              <div style={{ width: "160px", marginLeft: "auto" }}>
+              <div
+                style={{
+                  position: "fixed",
+                  top: "50%",
+                  right: "0",
+                  transform: "translateY(-50%)",
+                  width: "160px",
+                }}
+              >
                 <ins
                   className="kakao_ad_area"
                   style={{ display: "block" }}
