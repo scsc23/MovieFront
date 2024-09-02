@@ -5,6 +5,7 @@ import { AuthProvider } from "./(context)/AuthContext";
 import React from "react";
 import { ThemeProvider } from "@/(components)/DarkModToggle/ThemeContext";
 import Script from "next/script";
+import dynamic from "next/dynamic";
 
 const inter = Inter({ subsets: ["latin"] });
 
