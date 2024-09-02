@@ -22,24 +22,29 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <head>
-      </head>
+      <head></head>
       <body>
         <ThemeProvider>
           <AuthProvider>
-            <ins
-              className="kakao_ad_area"
-              style={{ display: "none" }}
-              data-ad-unit="DAN-aq3kjg7Rp6i1bhxu"
-              data-ad-width="160"
-              data-ad-height="600"
-            ></ins>
-            {children}
-            {modal}
+            <div style={{ display: "flex" }}>
+              <div style={{ flex: 1 }}>
+                {children}
+                {modal}
+              </div>
+              <div style={{ width: "160px", marginLeft: "auto" }}>
+                <ins
+                  className="kakao_ad_area"
+                  style={{ display: "block" }}
+                  data-ad-unit="DAN-aq3kjg7Rp6i1bhxu"
+                  data-ad-width="160"
+                  data-ad-height="600"
+                ></ins>
+              </div>
+            </div>
             <Script
               type="text/javascript"
               src="//t1.daumcdn.net/kas/static/ba.min.js"
-              strategy="afterInteractive" // 클라이언트에서만 실행되도록 설정
+              strategy="afterInteractive"
               async
             ></Script>
           </AuthProvider>
