@@ -26,18 +26,23 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <head>
+        {/* Google AdSense 스크립트 추가 */}
         <Script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8395468797693752"
           crossOrigin="anonymous"
           strategy="afterInteractive"
         />
+
+        {/* 리퍼러 정책 설정 */}
+        <meta name="referrer" content="no-referrer-when-downgrade" />
       </head>
 
       <body>
         <ThemeProvider>
           <AuthProvider>
             <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+              {/* 메인 콘텐츠 및 사이드바 */}
               <div style={{ flex: 1 }}>
                 <Sidebar />
                 {children}
@@ -45,7 +50,7 @@ export default function RootLayout({
                 <div id="modal-root"></div>
               </div>
 
-              {/* 페이지 우측에 광고 표시 */}
+              {/* 페이지 우측 광고 영역 */}
               <div style={{ width: '300px', textAlign: 'center', marginLeft: '20px' }}>
                 <ins className="adsbygoogle"
                   style={{ display: 'block', width: '100%', height: '600px' }}
@@ -59,7 +64,7 @@ export default function RootLayout({
               </div>
             </div>
 
-            {/* 페이지 하단에 광고 표시 (선택 사항) */}
+            {/* 페이지 하단 광고 영역 */}
             <div style={{ textAlign: 'center', margin: '20px 0' }}>
               <ins className="adsbygoogle"
                 style={{ display: 'block', width: '100%', height: '90px' }}
