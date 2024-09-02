@@ -4,8 +4,8 @@ import "./globals.css";
 import dynamic from "next/dynamic";
 import { AuthProvider } from "./(context)/AuthContext";
 import React from "react";
-import { ThemeProvider } from "@/(components)/DarkModToggle/ThemeContext";
-import Script from 'next/script';
+import {ThemeProvider} from "@/(components)/DarkModToggle/ThemeContext";
+import Script from 'next/script'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,58 +26,23 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <head>
-        {/* Google AdSense 스크립트 추가 */}
         <Script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8395468797693752"
           crossOrigin="anonymous"
           strategy="afterInteractive"
         />
-
-        {/* 리퍼러 정책 설정 */}
-        <meta name="referrer" content="no-referrer-when-downgrade" />
-      </head>
+        </head>
 
       <body>
-        <ThemeProvider>
+      <ThemeProvider>
           <AuthProvider>
-            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-              {/* 메인 콘텐츠 및 사이드바 */}
-              <div style={{ flex: 1 }}>
-                <Sidebar />
-                {children}
-                {modal}
-                <div id="modal-root"></div>
-              </div>
-
-              {/* 페이지 우측 광고 영역 */}
-              <div style={{ width: '300px', textAlign: 'center', marginLeft: '20px' }}>
-                <ins className="adsbygoogle"
-                  style={{ display: 'block', width: '100%', height: '600px' }}
-                  data-ad-client="ca-pub-8395468797693752"
-                  data-ad-slot="1234567890"
-                  data-ad-format="vertical"
-                  data-full-width-responsive="true"></ins>
-                <Script>
-                  {`(adsbygoogle = window.adsbygoogle || []).push({});`}
-                </Script>
-              </div>
-            </div>
-
-            {/* 페이지 하단 광고 영역 */}
-            <div style={{ textAlign: 'center', margin: '20px 0' }}>
-              <ins className="adsbygoogle"
-                style={{ display: 'block', width: '100%', height: '90px' }}
-                data-ad-client="ca-pub-8395468797693752"
-                data-ad-slot="0987654321"
-                data-ad-format="horizontal"
-                data-full-width-responsive="true"></ins>
-              <Script>
-                {`(adsbygoogle = window.adsbygoogle || []).push({});`}
-              </Script>
-            </div>
+          <Sidebar />
+            {children}          
+            {modal}
+          <div id="modal-root"></div>
           </AuthProvider>
-        </ThemeProvider>
+      </ThemeProvider>
       </body>
     </html>
   );
